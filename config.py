@@ -33,7 +33,7 @@ UPDATE_CHAT = os.getenv("UPDATE_CHAT", "-1004364670717")
 MUSJ_JOIN = os.getenv("MUSJ_JOIN", "-1001484473904")
 
 # Admin user configurations
-OWNER_ID = int(os.getenv("OWNER_ID", "0"))
+OWNER_ID = int(os.getenv("OWNER_ID", "5790406250"))
 
 # ImgBB API Key
 IMGBB_API_KEY = os.getenv("IMGBB_API_KEY", "")
