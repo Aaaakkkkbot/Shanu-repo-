@@ -20,7 +20,7 @@ TOKEN = os.getenv("TOKEN", "")
 # Logging & Logs Channel
 BOT_LOGGING = os.getenv("BOT_LOGGING", "-1004445101312")
 DATABASE_ID = os.getenv("DATABASE_ID", "-1003757977776")
-FORCE_JOIN = os.getenv("FORCE_JOIN", "-1004364670717")
+FORCE_JOIN = os.getenv("FORCE_JOIN", "-1001484473904")
 
 # Database configuration
 mongo_url = os.getenv("MONGO_URL", "")
