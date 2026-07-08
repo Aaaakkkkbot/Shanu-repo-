@@ -122,7 +122,7 @@ async def reupload_handler(client, message):
             # ── Step 2: Send photo to BOT_LOGGING ─────────
             try:
                 sent_msg = await client.send_photo(
-                    chat_id=BOT_LOGGING,
+                    chat_id=int(BOT_LOGGING),
                     photo=old_url,
                     caption=f"#reupload id:{char_id}"
                 )

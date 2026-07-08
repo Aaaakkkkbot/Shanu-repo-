@@ -263,7 +263,7 @@ async def ul_main(client, message):
                 # Send character details to the channel
                 if reply.photo or reply.document:
                     await client.send_photo(
-                        chat_id=DATABASE_ID,
+                        chat_id=int(DATABASE_ID),
                         photo=file_url,
                         caption=(
                             f"Character Name: {character_name}\n"
@@ -275,7 +275,7 @@ async def ul_main(client, message):
                     )
                 elif reply.video:
                     await client.send_video(
-                        chat_id=DATABASE_ID,
+                        chat_id=int(DATABASE_ID),
                         video=file_url,
                         caption=(
                             f"Character Name: {character_name}\n"

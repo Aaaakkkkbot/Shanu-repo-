@@ -43,8 +43,8 @@ async def generate_start_message(client, message):
 
     buttons = [
         [InlineKeyboardButton("Aᴅᴅ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ", url=f"https://t.me/{bot_user.username}?startgroup=true")],
-        [InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=SUPPORT_CHAT), 
-         InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url=UPDATE_CHAT)],
+        [InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/c/{str(SUPPORT_CHAT).lstrip('-100')}"), 
+         InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url=f"https://t.me/c/{str(UPDATE_CHAT).lstrip('-100')}")],
         [InlineKeyboardButton("Hᴇʟᴘ", callback_data="open_help")],
         [InlineKeyboardButton("Owner", url=f"https://t.me/xeno_kakarot")],
     ]
@@ -62,7 +62,7 @@ async def generate_group_start_message(client):
     buttons = [
         [
             InlineKeyboardButton("Aᴅᴅ Mᴇ", url=f"https://t.me/{bot_user.username}?startgroup=true"),
-            InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=SUPPORT_CHAT)
+            InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/c/{str(SUPPORT_CHAT).lstrip('-100')}")
         ]
     ]
     return caption, buttons
@@ -95,7 +95,7 @@ async def start_private_command(client, message):
     media = random.choice(START_MEDIA)
 
     await app.send_message(
-        chat_id=BOT_LOGGING,
+        chat_id=int(BOT_LOGGING),
         text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>sᴜᴅᴏʟɪsᴛ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
     )
 

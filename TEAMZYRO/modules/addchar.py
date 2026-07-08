@@ -115,7 +115,7 @@ async def request_upload(client, message):
         keyboard = InlineKeyboardMarkup(rarity_buttons)
 
         await client.send_photo(
-            chat_id=DATABASE_ID,
+            chat_id=int(DATABASE_ID),
             photo=catbox_url,
             caption=(
                 f"#pending\n\n"

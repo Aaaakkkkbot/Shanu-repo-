@@ -51,7 +51,7 @@ async def harem_handler(client: Client, message: Message):
 
     # Check if the user is in the support channel
     if not await check_support_channel(client, user_id):
-        keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/{SUPPORT_CHANNEL.lstrip('@')}")]]
+        keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/c/{str(SUPPORT_CHANNEL).lstrip('-100')}")]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await message.reply_text(
             f"Please join our support channel {SUPPORT_CHANNEL} to use this command!",
@@ -76,7 +76,7 @@ async def display_harem(client, message, user_id, page, filter_rarity, is_initia
     try:
         # Check support channel membership again for callback queries
         if not is_initial and not await check_support_channel(client, user_id):
-            keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/{SUPPORT_CHANNEL.lstrip('@')}")]]
+            keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/c/{str(SUPPORT_CHANNEL).lstrip('-100')}")]]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await callback_query.message.edit_text(
                 f"Please join our support channel {SUPPORT_CHANNEL} to view your harem!",
@@ -239,7 +239,7 @@ async def remove_filter_callback(client: Client, callback_query: CallbackQuery):
 
         # Check support channel membership
         if not await check_support_channel(client, user_id):
-            keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/{SUPPORT_CHANNEL.lstrip('@')}")]]
+            keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/c/{str(SUPPORT_CHANNEL).lstrip('-100')}")]]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await callback_query.message.edit_text(
                 f"Please join our support channel {SUPPORT_CHANNEL} to use this feature!",
@@ -281,7 +281,7 @@ async def hmode_handler(client: Client, message: Message):
 
     # Check support channel membership
     if not await check_support_channel(client, user_id):
-        keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/{SUPPORT_CHANNEL.lstrip('@')}")]]
+        keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/c/{str(SUPPORT_CHANNEL).lstrip('-100')}")]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         await message.reply_text(
             f"Please join our support channel {SUPPORT_CHANNEL} to use this command!",
@@ -316,7 +316,7 @@ async def set_rarity_callback(client: Client, callback_query: CallbackQuery):
 
         # Check support channel membership
         if not await check_support_channel(client, user_id):
-            keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/{SUPPORT_CHANNEL.lstrip('@')}")]]
+            keyboard = [[InlineKeyboardButton("Join Support Channel", url=f"https://t.me/c/{str(SUPPORT_CHANNEL).lstrip('-100')}")]]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await callback_query.message.edit_text(
                 f"Please join our support channel {SUPPORT_CHANNEL} to use this feature!",

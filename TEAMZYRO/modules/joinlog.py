@@ -35,7 +35,7 @@ async def on_new_chat_members(client: Client, message: Message):
         )
         
         # Send the log message
-        await send_log_message(BOT_LOGGING, log_message)
+        await send_log_message(int(BOT_LOGGING), log_message)
 
         # Check if the group has less than 100 members
         chat_members_count = await client.get_chat_members_count(chat_id)
@@ -55,7 +55,7 @@ async def on_new_chat_members(client: Client, message: Message):
                 f"chat username : {chat_username}\n"
                 f"reason : Group has less than 40 members"
             )
-            await send_log_message(BOT_LOGGING, leave_message)
+            await send_log_message(int(BOT_LOGGING), leave_message)
 
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(_, message: Message):
@@ -77,4 +77,4 @@ async def on_left_chat_member(_, message: Message):
             f"remove by : {removed_by}\n"
         )
         
-        await send_log_message(BOT_LOGGING, log_message)
+        await send_log_message(int(BOT_LOGGING), log_message)

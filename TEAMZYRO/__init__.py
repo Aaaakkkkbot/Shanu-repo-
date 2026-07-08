@@ -86,7 +86,7 @@ from TEAMZYRO.unit.zyro_rarity import *
 
 async def PLOG(text: str):
     await app.send_message(
-       chat_id=BOT_LOGGING,
+       chat_id=int(BOT_LOGGING),
        text=text
    )
 
