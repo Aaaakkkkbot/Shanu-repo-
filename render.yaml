@@ -1,0 +1,49 @@
+# Render deployment configuration
+# Web Service — required for Render free tier (Background Worker is paid only)
+# A lightweight health server runs on $PORT so Render's health check passes.
+services:
+  - type: web
+    name: shanu-waifu-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: TOKEN
+        sync: false
+      - key: MONGO_URL
+        sync: false
+      - key: BACKUP_MONGO_URL
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: BOT_LOGGING
+        sync: false
+      - key: DATABASE_ID
+        sync: false
+      - key: FORCE_JOIN
+        sync: false
+      - key: SUPPORT_CHAT
+        sync: false
+      - key: UPDATE_CHAT
+        sync: false
+      - key: MUSJ_JOIN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: IMGBB_API_KEY
+        sync: false
+      - key: START_MEDIA_1
+        sync: false
+      - key: START_MEDIA_2
+        sync: false
+      - key: PHOTO_URL_1
+        sync: false
+      - key: PHOTO_URL_2
+        sync: false
+      - key: STATS_IMG
+        sync: false
