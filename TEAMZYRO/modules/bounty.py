@@ -247,7 +247,7 @@ async def mybounty_handler(client: Client, message: Message):
     )
     
     buttons = InlineKeyboardMarkup([
-        [InlineKeyboardButton("💬 Support Group", url="https://t.me/oneforall_support")]
+        [InlineKeyboardButton("💬 Support Group", url="https://t.me/BotsXSupport")]
     ])
     
     await message.reply_photo(
